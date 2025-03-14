@@ -17,5 +17,5 @@ jobs:
           MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          application-id: IQPlan
-          environment-id: SamplePlan
+          application-id: SamplePlan
+          environment-id: QA
