@@ -1,6 +1,6 @@
 on: [push]
 
-name: mabl Complex Example
+name: mabl Simple Example
 
 jobs:
   test:
@@ -17,23 +17,5 @@ jobs:
           MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          application-id: SamplePlan
-          environment-id: IQPlan
-          app-url: <your-webapp-override-url>
-          mabl-branch: master
-          # Runs for both browsers
-          browser-types: |
-            chrome
-            firefox
-          # Runs plans matching ANY of the following labels AND the environment/application IDs above
-          plan-labels: |
-            canary
-            smoke-test
-            SamplePlan
-          http-headers: |
-            My-Header:the-value
-            My-Other-Header:the-second-value
-          continue-on-failure: true
-          rebaseline-images: true
-          set-static-baseline: true
-          event-time: <your-event-time-epoch-milliseconds>
+          application-id: IQPlan
+          environment-id: SamplePlan
